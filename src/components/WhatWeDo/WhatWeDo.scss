@@ -1,0 +1,50 @@
+@import "../../style/variables";
+
+.what-we-do-content {
+    background-color: $darker-section-color;
+    
+    .heading-section {
+        h2 {
+            margin-bottom: 3.5%;
+        }
+    }
+
+    .items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(400px,2fr));
+        grid-template-rows: auto;
+        align-items: center;
+        gap: 4vw;
+        grid-row-gap: 8vw;
+
+        .item {
+            width:100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.3rem;
+
+            h3 {
+                font-size: 1.75rem
+            }
+            svg {
+                color: $regular-color;
+                font-size: 4rem;
+            }
+
+            p {
+                line-height: 1.7;
+                color: $text-accent-color
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 478px) {
+    .what-we-do-content {
+        .items {
+            grid-template-columns: repeat(auto-fill,minmax(250px,2fr));
+        }
+    }
+}

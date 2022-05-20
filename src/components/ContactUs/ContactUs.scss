@@ -1,0 +1,157 @@
+@import "../../style/variables";
+
+.contact-us-content {
+    background-color: $regular-color;
+    display: grid;    
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-column-gap: 10rem;
+    grid-row-gap: 3rem;
+    color: $text-dark-color;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 2;
+            letter-spacing: 1px;
+        }
+
+        .item {
+            span {
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        .links {
+            display: flex;
+            gap: 2rem;
+            font-size: 2rem;
+            .Item {
+                color: $text-dark-color;
+                transition: .4s;
+
+                &:hover {
+                    color: $text-accent-color;
+                }
+            }
+        }
+    }
+
+    .right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .inputEl,.textareaEl {
+                display: flex;
+                flex-direction: column;
+    
+                label {
+                    font-weight: 600;
+                }
+
+                input,textarea {
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    background: none;
+                    padding: 1rem .5rem;
+                    border-bottom: 1px solid $text-accent-color;
+                    transition: .4s;
+
+                    &:focus {
+                        border-bottom: 1px solid $text-dark-color;
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                }
+
+
+            }
+
+            button {
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .75rem;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1230px) {
+    .contact-us-content {
+        .left{
+            text-align: center;
+            align-items: center;
+
+            .links {
+                .Item {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .right {
+            align-items: center;
+
+            form {
+
+                label {
+                    text-align: center;
+                }
+                button {
+                    width: 55%;
+                    padding: 1.5rem 1rem;
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-us-content {
+            .left,
+            .right {
+                h2 {
+                    text-align:center;
+                    font-size: 2rem;
+                }
+            }
+        }
+}
+
+@media only screen and(max-width: 478px) {
+    .contact-us-content {
+        grid-template-columns: repeat(auto-fill,minmax(220px,2fr));
+    }
+}

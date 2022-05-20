@@ -1,0 +1,85 @@
+@import "../../style/variables";
+
+.faq-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+    .horizontal-line {
+        width: 90%;
+        height: 1px;
+        margin: 2rem auto;
+    }
+
+    .heading-section {
+        align-items: flex-start;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+
+
+        .question  {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: $text-accent-color;
+            transition: color .2s;
+
+            h3 {
+                font-weight: 500;
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            svg {
+                font-size: 1.5rem;
+
+            }
+
+            h3.active,
+            svg.active {
+                color: $text-dark-color;
+            }
+        }
+        
+        p {
+            margin-top: 2rem;
+            margin-left: 2.5rem;
+            line-height: 1.5;
+        }
+        
+    }
+
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            font-size: 25rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1283px) {
+    .faq-content {
+        grid-template-columns: 1fr;
+
+
+        .right {
+            display: none;
+        }
+
+        .left {
+            justify-content: center;
+
+            .heading-section {
+                align-items: center;
+            }
+        }
+    }
+
+}

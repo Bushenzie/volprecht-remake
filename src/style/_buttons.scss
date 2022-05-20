@@ -1,0 +1,47 @@
+@import "./variables";
+
+
+.btn {
+    cursor: pointer;
+    background: none;
+    background-color: $regular-color;
+    color: $text-dark-color;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    padding: 1rem 2.5rem;
+    transition: .5s;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: $darker-regular-color;
+        color: #000;
+    }
+}
+
+.btn_blank {
+    background: none;
+    border: 1px solid $text-dark-color;
+    color: $text-dark-color;
+    transition: .5s;
+
+    &:hover {
+        transform: scale(1);
+        background-color: $text-dark-color;
+        color: $text-light-color;
+    }
+}
+
+.btn_black {
+
+    background: $text-dark-color;
+    color: $text-light-color;
+    &:hover {
+
+        color: $text-light-color;
+        background: #000;
+        transform: scale(1);
+    }
+}

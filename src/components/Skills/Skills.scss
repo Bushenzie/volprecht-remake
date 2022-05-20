@@ -1,0 +1,60 @@
+@import "../../style/variables";
+
+.resume-content {
+
+    min-height: 0;
+
+    .items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 2fr));
+        grid-template-rows: auto;
+        align-items: center;
+        gap: 4vw;
+        grid-row-gap: 5vw;
+    
+        .item {
+
+            .upper {
+                width: 100%;
+                display: flex;
+                justify-content:space-between;
+                
+                h5 {
+                    font-size: 1.1rem;
+                }
+            
+            }
+    
+            .lower {
+                
+                progress {
+                    width: 100%;
+                    border-radius: 5rem; 
+                    height: .7rem;
+                }
+                progress::-webkit-progress-bar {
+                    background-color: #EEE;
+                    border-radius: 5rem; 
+                }
+                progress::-webkit-progress-value {
+                    background-color: $regular-color;
+                    border-radius: 5rem; 
+                }
+            }
+        }
+    }
+
+    .button-center {
+        margin-top: 7.5rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .resume-content { 
+        .items { 
+            grid-template-columns: repeat(auto-fill, minmax(100%, 2fr));
+        }
+    }
+}

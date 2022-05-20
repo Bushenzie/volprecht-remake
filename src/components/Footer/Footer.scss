@@ -1,0 +1,16 @@
+@import "../../style/variables";
+
+.footer-content {
+    padding: 3% 11vw;
+    color: $text-light-color;
+    background-color: $text-dark-color;
+    text-align: center;
+
+    span {
+        letter-spacing: 1.5px;
+
+        #highlight {
+            color: $regular-color;
+        }
+    }
+}

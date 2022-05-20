@@ -1,0 +1,85 @@
+@import "../../style/variables";
+
+.portfolio-content {
+    background-color: $darker-section-color;
+
+    .items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+        gap: 2.5rem;
+
+        .Item {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+
+    
+            &:hover .image {
+                filter: brightness(50%);
+            }
+    
+            .image {
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                transition: .5s;
+            }
+    
+            .text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                user-select: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $text-light-color;
+                transition: all .5s;
+                animation: fadeIn .5s;
+    
+    
+                h4 {
+                    font-size: 1.5rem;
+                }
+    
+                h5 {
+                    font-weight: 400;
+                }
+    
+                svg {
+                    color: $regular-color;
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media only screen and(max-width: 478px) {
+    .portfolio-content {
+        .items {
+            grid-template-columns: repeat(auto-fill,minmax(220px,2fr));
+        }
+    }
+}

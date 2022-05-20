@@ -1,0 +1,89 @@
+@import "../../style/variables";
+
+.welcome-content {
+    height: 100vh;
+
+    .background {
+        position: absolute;
+        background-image: url("../../images/welcome.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        filter: brightness(30%);
+    }
+
+    .text {
+        height: 100%;
+        white-space: nowrap;
+        color: $text-light-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.75%;
+
+        :nth-child(1),
+        :nth-child(2) {
+            text-transform: uppercase;
+        }
+
+        :nth-child(1) {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        :nth-child(2) {
+            letter-spacing: 1px;
+            font-size: 6rem;
+        }
+
+        :nth-child(3) {
+            font-weight: 200;
+            font-size: 1.5rem;
+        }
+
+        .btn {
+            margin-top: 2rem;
+        }
+    }
+
+    .arrow {
+        display: flex;
+        justify-content: center;
+        color: $text-light-color;
+        font-size: 2rem;
+
+        svg {
+            position: absolute;
+            bottom: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .welcome-content .text  {
+        :nth-child(1) {
+            font-size: 1.7rem;
+        }
+        :nth-child(2) {
+            font-size: 4.5rem;
+        }
+        :nth-child(3) {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 478px) {
+    .welcome-content .text  {
+        :nth-child(1) {
+            font-size: 1.2rem;
+        }
+        :nth-child(2) {
+            font-size: 2.7rem;
+        }
+    }
+}
+
