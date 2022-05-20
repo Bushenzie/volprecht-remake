@@ -11,8 +11,8 @@ const Menu = ({closeEvent}) => {
             <MenuItem close={closeEvent} where="what-we-do" name="What We Do"/>
             <MenuItem close={closeEvent} where="skills" name="Skills"/>
             <MenuItem close={closeEvent} where="portfolio" name="Portfolio"/>
-            <MenuItem close={closeEvent} where="faq" name="FAQ"/>
-            <MenuItem close={closeEvent} where="client-speak" name="Client Speak"/>
+            {/* <MenuItem close={closeEvent} where="faq" name="FAQ"/>
+            <MenuItem close={closeEvent} where="client-speak" name="Client Speak"/> */}
             <MenuItem close={closeEvent} where="contact-us" name="Contact Us"/>
             <li className="links">
                 <Link where="https://www.linkedin.com/"><FaLinkedin /></Link>
