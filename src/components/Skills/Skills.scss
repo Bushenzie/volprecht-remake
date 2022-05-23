@@ -10,38 +10,7 @@
         grid-template-rows: auto;
         align-items: center;
         gap: 4vw;
-        grid-row-gap: 5vw;
-    
-        .item {
-
-            .upper {
-                width: 100%;
-                display: flex;
-                justify-content:space-between;
-                
-                h5 {
-                    font-size: 1.1rem;
-                }
-            
-            }
-    
-            .lower {
-                
-                progress {
-                    width: 100%;
-                    border-radius: 5rem; 
-                    height: .7rem;
-                }
-                progress::-webkit-progress-bar {
-                    background-color: #EEE;
-                    border-radius: 5rem; 
-                }
-                progress::-webkit-progress-value {
-                    background-color: $regular-color;
-                    border-radius: 5rem; 
-                }
-            }
-        }
+        grid-row-gap: 5vw;   
     }
 
     .button-center {

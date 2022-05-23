@@ -2,7 +2,7 @@ import React from 'react'
 
 const SkillItem = ({name,percent}) => {
   return (
-    <div className='item'>
+    <div className='skill-item'>
         <div className="upper">
             <h5>{name}</h5>
             <h5>{percent}%</h5>

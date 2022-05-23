@@ -1,4 +1,5 @@
 import "./CTO.scss"
+import { Link } from 'react-scroll'
 
 const CTO = () => {
   return (
@@ -6,7 +7,8 @@ const CTO = () => {
         <div className="background"></div>
         <div className="text">
             <h2>Interested in working with us?</h2>
-            <button className="btn">Hire us!</button>
+            <Link className="btn" to="contact-us" spy={true} smooth={true} offset={0} duration={500} href="contact-us">Hire Us!</Link>
+            
         </div>
     </div>
   )
